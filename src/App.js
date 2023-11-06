@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Registration } from './pages/Registration';
+import { Header } from './components/Header/header';
+import { Authorization } from './pages/Authorization/authorization'
+
 import './App.css';
 
-function App() {
+const App = () => {
+
+  const [authActive, setAuthActive] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header setAuthActive={setAuthActive} />
+        <Authorization isAuthActive={authActive} setAuthActive={setAuthActive} />
+      <Routes>
+        {/*<Route exact path={"/"} element={Main}/>*/}
+        <Route path={"/registration"} element={Registration}/>
+        {/*<Route path={"/user_page"} element={UserPage}/>*/}
+      </Routes>
+      {/*<Footer/>   */}
     </div>
   );
 }
