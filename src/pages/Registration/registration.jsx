@@ -1,7 +1,7 @@
-import React, {useContext, useState} from 'react';
+import React, {Fragment, useContext, useState} from 'react';
 import './registration.module.scss';
-import {StoreContext} from '../../components/data/store';
-import axios from 'axios'
+import {StoreContext} from '../../data/store';
+import axios from 'axios';
 
 
 export const Registration = () => {
@@ -95,8 +95,8 @@ export const Registration = () => {
     }
 
     return(
-        <>
-            <h1 className='registration_title'>Регистрация</h1>
+        <Fragment>
+            <h1 className='registration_title'>Sign up</h1>
             <form onSubmit={registrationRequest} className='registration'>
                 <input onChange={enterEmail} value={email} type="text" placeholder='Email' />
                 <input onChange={enterCryptoWallet} value={cryptoWallet} type="text" placeholder='number of crypto wallet'/>
@@ -104,8 +104,8 @@ export const Registration = () => {
                 <input onChange={confirmPassword} value={confirmpassword} type="password" placeholder='Confirm password' />
 
                 <label className='alarm'>{error}</label>
-                <button className='registration_button'>Registration</button>
+                <button className='registration_button'>Sign up</button>
             </form>
-        </>
+        </Fragment>
     )
 }

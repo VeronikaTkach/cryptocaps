@@ -1,1 +1,1 @@
-export {Autorization} from './autorization'
+export {Authorization} from './authorization'

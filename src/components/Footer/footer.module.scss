@@ -1,0 +1,25 @@
+.footer{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px;
+  border-top: 1px solid black;
+}
+
+.contacts{
+  margin: 20px 150px;
+}
+
+.social_media{
+  display: flex;
+}
+
+.map{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 150px;
+
+}
+
+.map_column{
+  margin: 0 50px;
+}
