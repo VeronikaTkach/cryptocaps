@@ -3,6 +3,9 @@ import {Link} from 'react-router-dom';
 import { StoreContext } from '../../data/store';
 // import axios from 'axios';
 import css from './authorization.module.scss';
+import img1 from '../../assets/icons/FrameBigNormal.svg';
+import img2 from '../../assets/icons/discord.png';
+import img3 from '../../assets/icons/twitter.png';
 
 export const Authorization = () => {
     const [isPopupVisible, setPopupVisible] = useState(false);
@@ -27,18 +30,18 @@ export const Authorization = () => {
     //     e.stopPropagation()
     // }
 
-    // const changeEmail = (e) => {
-    //     setErrorMessage('')
-    //
-    //     if (!isValidEmail(e)) {
-    //         setErrorMessage("Enter correct e-mail")
-    //     }
-    //     setEmail(e.target.value)
-    // }
-    //
-    // const changePass = (e) => {
-    //     setPassword(e.target.value)
-    // }
+    const changeEmail = (e) => {
+        setErrorMessage('')
+
+        if (!isValidEmail(e)) {
+            setErrorMessage("Enter correct e-mail")
+        }
+        setEmail(e.target.value)
+    }
+
+    const changePass = (e) => {
+        setPassword(e.target.value)
+    }
 
     // const authorizationRequest = (e) => {
     //     e.preventDefault()
@@ -94,9 +97,34 @@ export const Authorization = () => {
                 <>
                     <div className={css.overlay} onClick={closePopup}></div>
                     <div className={css.popup}>
-                        {/* Здесь можно разместить форму для ввода данных авторизации */}
-                        <h2>Всплывающее окно авторизации</h2>
-                        <button onClick={closePopup}>Закрыть</button>
+                        {/*<div className={css.sign_up}>*/}
+                        {/*    /!* Здесь можно разместить форму для ввода данных авторизации *!/*/}
+                        {/*    <h2>Don't have an account?</h2>*/}
+                        {/*    <button onClick={closePopup}>Sign up</button>*/}
+                        {/*</div>*/}
+                        <div className={css.login}>
+                            {/* Здесь можно разместить форму для ввода данных авторизации */}
+                            <h2>Login to account</h2>
+                            <input type="text" value={email} onChange={changeEmail} placeholder='USERNAME' />
+                            <input type="password" value={password} onChange={changePass} placeholder='PASSWORD' />
+                            <p className='alarm'> {errorMessage} </p>
+                            {/*<button onClick={closePopup}>LOGIN</button>*/}
+                            <a onClick={closePopup} href={'/'}>
+                                <img src={img1} alt={'login_button'}/>
+                            </a>
+                            <h3>Forgot password or username. <Link to={'/'}>CLICK HERE</Link></h3>
+                            <div className={css.sign_in_with}>
+                                <h4>Sign in with</h4>
+                                <div className={css.social_media}>
+                                    <a onClick={closePopup} href={'/'}>
+                                        <img src={img2} alt={'login_discord'}/>
+                                    </a>
+                                    <a onClick={closePopup} href={'/'}>
+                                        <img src={img3} alt={'login_twitter'}/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </>
             )}

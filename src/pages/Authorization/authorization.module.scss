@@ -4,7 +4,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: rgba(93,255,81,1);
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000; /* Устанавливаем высокий z-index, чтобы окно было поверх всего остального */
@@ -20,3 +20,46 @@
   background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет */
   z-index: 999; /* Немного меньше z-index, чем у всплывающего окна, чтобы он был под ним, но поверх всего остального */
 }
+
+.sign_up{
+  width: 1076px;
+  height: 510px;
+
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 545px;
+  height: 716px;
+}
+
+input{
+  width: 380px;
+  height: 48px;
+  border: solid 3px rgba(46,18,64,1);
+  margin: 20px 0;
+  background-color: rgba(93,255,81,1);
+}
+
+input::placeholder {
+  padding-left: 15px;
+}
+
+a{
+  margin: 40px 0;
+}
+
+.sign_in_with{
+  text-align: center;
+
+}
+
+.social_media{
+  
+}
+
+
+

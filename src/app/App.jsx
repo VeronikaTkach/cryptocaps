@@ -12,7 +12,7 @@ const App = () => {
   const [authActive, setAuthActive] = useState(false);
 
   return (
-    <div className='wrapper'>
+    <div className={css.main}>
         <Header authActive={authActive} setAuthActive={setAuthActive} />
         {/*<Authorization isAuthActive={authActive} setAuthActive={setAuthActive} />*/}
         <Routes>
