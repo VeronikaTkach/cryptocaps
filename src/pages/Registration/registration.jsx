@@ -1,25 +1,46 @@
 import React, {Fragment, useContext, useState} from 'react';
-import './registration.module.scss';
 import {StoreContext} from '../../data/store';
 import axios from 'axios';
+import {Link} from "react-router-dom";
+import css from '../Registration/registration.module.scss';
+import img5 from '../../assets/icons/close.svg';
+import img6 from '../../assets/icons/button_sign_up_reg_off.svg';
 
 
 export const Registration = () => {
 
-    const registrationUrl = '/api/auth/sign_up'
+    const [isPopupVisible, setPopupVisible] = useState(false)
 
+    const registrationUrl = '/api/auth/sign_up'
     const {apiDomain} = useContext(StoreContext)
 
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [confirmpassword, setConfirmPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
     const [cryptoWallet, setCryptoWallet] = useState('')
     const [error, setError] = useState('')
     const [data, setData] = useState(null)
+    const openPopup = () => {
+        setPopupVisible(true);
+    };
+
+    const closePopup = () => {
+        setPopupVisible(false);
+    };
 
 
     const enterEmail = (e) => {
         setEmail(e.target.value)
+    }
+
+    const enterFirstName = (e) => {
+        setFirstName(e.target.value)
+    }
+
+    const enterLastName = (e) => {
+        setLastName(e.target.value)
     }
 
     const enterCryptoWallet = (e) => {
@@ -30,12 +51,12 @@ export const Registration = () => {
         setPassword(e.target.value)
     }
 
-    const confirmPassword = (e) => {
+    const enterConfirmPassword = (e) => {
         setConfirmPassword(e.target.value)
     }
 
-    const checkPasswords = (pass, confirmpass) => {
-        if (pass === confirmpass){
+    const checkPasswords = (pass, confirmPass) => {
+        if (pass === confirmPass){
             return true
         }
         else {
@@ -53,7 +74,7 @@ export const Registration = () => {
             cryptoWallet
         }
 
-        const passwordCheckResult = checkPasswords(password, confirmpassword)
+        const passwordCheckResult = checkPasswords(password, confirmPassword)
         if (passwordCheckResult === false){
             setError('Пароли не совпадают')
             return
@@ -95,17 +116,69 @@ export const Registration = () => {
     }
 
     return(
-        <Fragment>
-            <h1 className='registration_title'>Sign up</h1>
-            <form onSubmit={registrationRequest} className='registration'>
-                <input onChange={enterEmail} value={email} type="text" placeholder='Email' />
-                <input onChange={enterCryptoWallet} value={cryptoWallet} type="text" placeholder='number of crypto wallet'/>
-                <input onChange={enterPassword} value={password} type="password" placeholder='Password'/>
-                <input onChange={confirmPassword} value={confirmpassword} type="password" placeholder='Confirm password' />
+        <div>
+            <Link onClick={openPopup} to={'/'}>Registration</Link>
 
-                <label className='alarm'>{error}</label>
-                <button className='registration_button'>Sign up</button>
-            </form>
-        </Fragment>
+            {isPopupVisible && (
+
+                <Fragment>
+                    <div className={css.overlay}></div>
+                    <div className={css.popup}>
+                        <div className={css.header_reg}>
+                            <h2 className={css.text_create}>Create an account</h2>
+                            <Link className={css.close} onClick={closePopup} to={'/'}>
+                                <img src={img5} alt={'close'}/>
+                            </Link>
+                        </div>
+                        <form onSubmit={registrationRequest} className={css.registration}>
+                            <div className={css.reg_input}>
+                                <h5 className={css.text_h5}>FIRST NAME</h5>
+                                <input className={css.reg_input_input} type={'text'} value={firstName} onChange={enterFirstName}/>
+                            </div>
+                            <div className={css.reg_input}>
+                                <h5 className={css.text_h5}>LAST NAME</h5>
+                                <input className={css.reg_input_input} type={'text'} value={lastName} onChange={enterLastName}/>
+                            </div>
+                            <div className={css.reg_input}>
+                                <h5 className={css.text_h5}>EMAIL</h5>
+                                <input className={css.reg_input_input} type={'text'} value={email} onChange={enterEmail}/>
+                            </div>
+                            <div className={css.reg_input}>
+                                <h5 className={css.text_h5}>PASSWORD</h5>
+                                <input className={css.reg_input_input} type={'password'} value={password} onChange={enterPassword}/>
+                            </div>
+                            <div className={css.reg_input}>
+                                <h5 className={css.text_h5}>CONFIRM PASSWORD</h5>
+                                <input className={css.reg_input_input} type={'password'} value={confirmPassword} onChange={enterConfirmPassword}/>
+                            </div>
+                            <div className={css.reg_input}>
+                                <h5 className={css.text_h5}>WALLET METAMASK</h5>
+                                <input className={css.reg_input_input} type={'text'} value={cryptoWallet} onChange={enterCryptoWallet}/>
+                            </div>
+                            <label className={css.alarm}>{error}</label>
+                            <div className={css.checkbox}>
+                                <input type={"checkbox"} onChange={''}/>
+                                <h5 className={css.text_h5}>I ACCEPT THE THERMS OF USE</h5>
+                            </div>
+                            <a onClick={closePopup} href={'/'}>
+                                <img src={img6} alt={'sign_up_button'}/>
+                            </a>
+                        </form>
+                    </div>
+
+
+                    {/*<h1 className='registration_title'>Sign up</h1>*/}
+                    {/*<form onSubmit={registrationRequest} className='registration'>*/}
+                    {/*    <input onChange={enterEmail} value={email} type="text" placeholder='Email' />*/}
+                    {/*    <input onChange={enterCryptoWallet} value={cryptoWallet} type="text" placeholder='number of crypto wallet'/>*/}
+                    {/*    <input onChange={enterPassword} value={password} type="password" placeholder='Password'/>*/}
+                    {/*    <input onChange={confirmPassword} value={confirmpassword} type="password" placeholder='Confirm password' />*/}
+
+                    {/*    <label className='alarm'>{error}</label>*/}
+                    {/*    <button className='registration_button'>Sign up</button>*/}
+                    {/*</form>*/}
+                </Fragment>
+            )}
+        </div>
     )
 }

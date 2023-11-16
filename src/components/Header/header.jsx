@@ -2,8 +2,7 @@ import React, {Fragment, useState} from 'react';
 import css from './header.module.scss';
 import {Link, Route, Routes} from 'react-router-dom';
 import {Authorization} from "../../pages/Authorization";
-
-
+import {Registration} from "../../pages/Registration";
 
 
 export const Header = ({authActive, setAuthActive}) => {
@@ -22,7 +21,7 @@ export const Header = ({authActive, setAuthActive}) => {
                         <Link className={css.link} to={'/'}>About</Link>
                         <div className={css.link}><Authorization/></div>
                         <button className={css.link}>How to start</button>
-                        <button className={css.link}>Registration</button>
+                        <button className={css.link}><Registration/></button>
                     </li>
             </div>
         </Fragment>
