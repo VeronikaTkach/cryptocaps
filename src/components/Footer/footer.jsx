@@ -9,7 +9,7 @@ export const Footer = () => {
         <Fragment>
             <div className={css.footer}>
                 <div className={css.contacts}>
-                    <div>Cripto caps</div>
+                    <div>Crypto caps</div>
                     <div className={css.social_media}>
                         <Link to={'/'}>1</Link>
                         <Link to={'/'}>1</Link>
