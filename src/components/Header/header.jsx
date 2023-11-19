@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import css from './header.module.scss';
-import {Link, Route, Routes} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {Authorization} from "../Authorization";
 import {Registration} from "../Registration";
 import img4 from "../../assets/icons/button_sign_up_off.svg";
@@ -8,11 +8,7 @@ import img5 from "../../assets/icons/close.svg";
 import img6 from '../../assets/icons/button_login_off_overlay.svg';
 
 
-export const Header = ({authActive, setAuthActive}) => {
-
-    const showAuthForm = () =>{
-        setAuthActive(true)
-    }
+export const Header = () => {
 
     const [isOverlayVisible, setOverlayVisible] = useState(false);
     const [isAuthorizationVisible, setAuthorizationVisible] = useState(false);

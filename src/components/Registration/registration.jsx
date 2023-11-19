@@ -1,9 +1,8 @@
 import React, {Fragment, useContext, useState} from 'react';
 import {StoreContext} from '../../data/store';
 import axios from 'axios';
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 import css from '../Registration/registration.module.scss';
-import img5 from '../../assets/icons/close.svg';
 import img6 from '../../assets/icons/button_sign_up_reg_off.svg';
 
 
@@ -70,17 +69,17 @@ export const Registration = () => {
             return
         }
 
-        if (email == ""){
+        if (email === ""){
             setError('Введите email')
             return
         }
 
-        if (password == ""){
+        if (password === ""){
             setError('Введите пароль')
             return
         }
 
-        if (cryptoWallet == ""){
+        if (cryptoWallet === ""){
             setError('Введите номер криптокошелька')
             return
         }

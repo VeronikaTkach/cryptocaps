@@ -1,13 +1,12 @@
 import React, {Fragment, useContext, useState} from 'react';
-import {Link, Route, Routes} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { StoreContext } from '../../data/store';
 // import axios from 'axios';
 import css from './authorization.module.scss';
 import img1 from '../../assets/icons/button_login_off.svg';
 import img2 from '../../assets/icons/discord.png';
 import img3 from '../../assets/icons/twitter.png';
-import img4 from '../../assets/icons/button_sign_up_off.svg';
-import img5 from '../../assets/icons/close.svg';
+import {MyButton} from "../Buttons";
 
 export const Authorization = () => {
 
@@ -91,9 +90,12 @@ export const Authorization = () => {
                         <input className={css.input_auth} type={'text'} value={email} onChange={changeEmail} placeholder='EMAIL' />
                         <input className={css.input_auth} type={'text'} value={password} onChange={changePass} placeholder='PASSWORD' />
                         <p className={css.alarm}> {errorMessage} </p>
-                        <a href={'/'}>
-                            <img src={img1} alt={'login_button'}/>
-                        </a>
+
+                        <MyButton btnCaption={'Login'}/>
+
+                        {/*<a href={'/'}>*/}
+                        {/*    <img src={img1} alt={'login_button'}/>*/}
+                        {/*</a>*/}
                         <h3>Forgot password or username. <Link to={'/'}>CLICK HERE</Link></h3>
                         <div className={css.sign_in_with}>
                             <h4>Sign in with</h4>

@@ -1,0 +1,36 @@
+
+.container {
+  overflow: visible; /* Делаем видимой область за пределами clip-path */
+  position: relative;
+
+}
+
+.btn {
+  border: none;
+  color: white;
+  width: 140px;
+  height: 48px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  clip-path: polygon(15% 0%, 200% -200%, 100% 200%, -30% 100%, 15% 0%);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.btn_border {
+  border: solid 2px #F30096;
+}
+
+.btn_gradient {
+  background: linear-gradient(to bottom, #f00094, #5d0039); /* Градиент от зеленого к синему слева направо */
+}
+
+  .btn:hover {
+  box-shadow:0 0 10px #fff; /* Белое свечение при наведении */
+
+}
