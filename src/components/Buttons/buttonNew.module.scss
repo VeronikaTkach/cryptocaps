@@ -1,0 +1,18 @@
+.parent_container{
+  min-width: 140px; /* или любое другое значение в процентах */
+  margin: auto; /* для центрирования */
+  display: inline-block;
+  background: none;
+  border: none;
+}
+
+.svg_button {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease; /* добавляем плавный переход для свечения */
+}
+
+.svg_button:hover svg path {
+  box-shadow:0 0 10px 3px #fff; /* Белое свечение при наведении */
+}

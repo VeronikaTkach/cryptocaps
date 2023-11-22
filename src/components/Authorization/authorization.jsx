@@ -6,6 +6,8 @@ import css from './authorization.module.scss';
 import img1 from '../../assets/icons/button_login_off.svg';
 import img2 from '../../assets/icons/discord.png';
 import img3 from '../../assets/icons/twitter.png';
+// import {MyButton} from "../Buttons";
+import {NewButton} from "../Buttons";
 import {MyButton} from "../Buttons";
 
 export const Authorization = () => {
@@ -91,7 +93,8 @@ export const Authorization = () => {
                         <input className={css.input_auth} type={'text'} value={password} onChange={changePass} placeholder='PASSWORD' />
                         <p className={css.alarm}> {errorMessage} </p>
 
-                        <MyButton btnCaption={'Login'}/>
+                        {/*<MyButton btnCaption={'Login'}/>*/}
+                        <NewButton btnCaption={'Login'}/>
 
                         {/*<a href={'/'}>*/}
                         {/*    <img src={img1} alt={'login_button'}/>*/}

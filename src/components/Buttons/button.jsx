@@ -1,9 +1,9 @@
 import React from 'react';
 import css from './button.module.scss';
 
-export const MyButton = ({btnCaption, condition()}) => {
+export const MyButton = ({btnCaption}) => {
 
-    const condition = true;
+    // const condition = true;
 
     return (
         <div className={css.container}>

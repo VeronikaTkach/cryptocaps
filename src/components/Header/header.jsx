@@ -48,6 +48,9 @@ export const Header = () => {
                                 <button onClick={showAuthorization} className={css.button_sign_in}>
                                     <img src={img6} alt={'button sign in'}/>
                                 </button>
+                                {/*<div className={`transition-container ${isAuthorizationVisible ? 'authorizationVisible' : ''}`}>*/}
+                                {/*    {isAuthorizationVisible ? <Authorization /> : <Registration />}*/}
+                                {/*</div>*/}
                             </div>
                             <div className={css.sign_up}>
                                 <h2>Don't have an account?</h2>

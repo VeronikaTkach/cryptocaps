@@ -2,14 +2,16 @@
 .container {
   overflow: visible; /* Делаем видимой область за пределами clip-path */
   position: relative;
+  min-width: 140px;
 
 }
 
 .btn {
   border: none;
+  background: linear-gradient(to bottom, #f00094, #5d0039); /* Градиент от зеленого к синему слева направо */
   color: white;
-  width: 140px;
-  height: 48px;
+  min-width: 140px;
+  min-height: 48px;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -30,7 +32,7 @@
   background: linear-gradient(to bottom, #f00094, #5d0039); /* Градиент от зеленого к синему слева направо */
 }
 
-  .btn:hover {
+.btn:hover {
   box-shadow:0 0 10px #fff; /* Белое свечение при наведении */
 
 }
