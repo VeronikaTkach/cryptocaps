@@ -9,6 +9,7 @@ import img3 from '../../assets/icons/twitter.png';
 // import {MyButton} from "../Buttons";
 import {NewButton} from "../Buttons";
 import {MyButton} from "../Buttons";
+import {Header} from "../Header";
 
 export const Authorization = () => {
 
@@ -24,14 +25,38 @@ export const Authorization = () => {
     //     e.stopPropagation()
     // }
 
+    const checkValidEmail = (emailString) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(emailString);
+    }
+
     const changeEmail = (e) => {
         setErrorMessage('')
+        const emailString = e.target.value;
 
-        if (!isValidEmail(e)) {
+        if (!checkValidEmail(emailString)) {
             setErrorMessage("Enter correct e-mail")
         }
-        setEmail(e.target.value)
+
+        setEmail(emailString)
     }
+
+    // const changeEmail =  (e) => {
+    //     const inputValue = e.target.value;
+    //     setEmail(inputValue);
+    //
+    //     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    //     const isValidEmail = emailRegex.test(inputValue);
+    //     setValidEmail(isValidEmail);
+    //
+    //     setErrorMessage('')
+    //
+    //     if(!isValidEmail(e)) {
+    //         setErrorMessage("Enter correct e-mail")
+    //             }
+    //         setEmail(e.target.value)
+    //
+    // }
 
     const changePass = (e) => {
         setPassword(e.target.value)
@@ -78,9 +103,9 @@ export const Authorization = () => {
     //
     // }
 
-    const isValidEmail = (e) => {
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return emailPattern.test(e);
+
+    const handlerClick = () => {
+        return
     }
 
     return(
@@ -89,16 +114,12 @@ export const Authorization = () => {
                 <div className={css.popup_auth}>
                     <div className={css.login}>
                         <h2>Login to account</h2>
-                        <input className={css.input_auth} type={'text'} value={email} onChange={changeEmail} placeholder='EMAIL' />
+                        <input className={css.input_auth} type={'email'} value={email} onChange={changeEmail} placeholder='EMAIL' />
                         <input className={css.input_auth} type={'text'} value={password} onChange={changePass} placeholder='PASSWORD' />
                         <p className={css.alarm}> {errorMessage} </p>
 
                         {/*<MyButton btnCaption={'Login'}/>*/}
-                        <NewButton btnCaption={'Login'}/>
-
-                        {/*<a href={'/'}>*/}
-                        {/*    <img src={img1} alt={'login_button'}/>*/}
-                        {/*</a>*/}
+                        <NewButton btnCaption={'Login'} onClickHandler={handlerClick}/>
                         <h3>Forgot password or username. <Link to={'/'}>CLICK HERE</Link></h3>
                         <div className={css.sign_in_with}>
                             <h4>Sign in with</h4>

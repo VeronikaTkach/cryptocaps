@@ -38,7 +38,6 @@ export const Header = () => {
 
     return(
         <Fragment>
-
             {isOverlayVisible && (
                 <div className={css.overlay}>
                     <div className={css.popup_down}>
@@ -65,15 +64,17 @@ export const Header = () => {
                     </Link>
                 </div>
             )}
+                {isAuthorizationVisible && (
+                    <div className={css.transition}>
+                        <Authorization/>
+                    </div>
+                )}
 
-            {isAuthorizationVisible && (
-                <Authorization/>
-            )}
-
-            {isRegistrationVisible && (
-                <Registration/>
-            )}
-
+                {isRegistrationVisible && (
+                    <div className={css.transition}>
+                        <Registration/>
+                    </div>
+                )}
             <div className={css.header}>
                     <li className={css.logo}> logo </li>
                     <li className={css.h_menu_li}>

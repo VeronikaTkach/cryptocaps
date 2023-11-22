@@ -65,22 +65,22 @@ export const Registration = () => {
 
         const passwordCheckResult = checkPasswords(password, confirmPassword)
         if (passwordCheckResult === false){
-            setError('Пароли не совпадают')
+            setError('Password mismatch')
             return
         }
 
         if (email === ""){
-            setError('Введите email')
+            setError('Enter email')
             return
         }
 
         if (password === ""){
-            setError('Введите пароль')
+            setError('Enter password')
             return
         }
 
         if (cryptoWallet === ""){
-            setError('Введите номер криптокошелька')
+            setError('Enter crypto number')
             return
         }
 
