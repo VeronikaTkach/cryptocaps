@@ -59,22 +59,20 @@
 }
 
 .sign_up, .sign_in{
-  padding: 150px 0px;
+  padding: 200px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.sign_up {
-  margin-left: 200px;
+  margin-left: 600px;
 }
 
 .popup_down h2{
   font-size: 32px;
   color: white;
+  margin-bottom: 35px;
 }
 
-.button_sign_up, .button_sign_in {
+.btn_sign_up, .btn_sign_in {
   background: rgba(43,12,58,1);
   border: none;
   width: 150px;
@@ -83,18 +81,7 @@
 
 .close{
   position: fixed;
-  top: 5%;
-  right: 5%;
-  z-index: 901;
+  top: 15%;
+  right: 47%;
+  z-index: 1000;
 }
-
-
-//.transition {
-//  opacity: 0;
-//  transition: opacity 0.3s ease-in-out;
-//}
-//
-//.transition.visible {
-//  opacity: 1;
-//}
-

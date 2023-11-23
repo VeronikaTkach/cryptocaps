@@ -4,8 +4,9 @@ import {Link} from 'react-router-dom';
 import {Authorization} from "../Authorization";
 import {Registration} from "../Registration";
 import img4 from "../../assets/icons/button_sign_up_off.svg";
-import img5 from "../../assets/icons/close.svg";
+import img5 from "../../assets/icons/closePink.svg";
 import img6 from '../../assets/icons/button_login_off_overlay.svg';
+import {NewButton} from "../Buttons";
 
 
 export const Header = () => {
@@ -13,25 +14,33 @@ export const Header = () => {
     const [isOverlayVisible, setOverlayVisible] = useState(false);
     const [isAuthorizationVisible, setAuthorizationVisible] = useState(false);
     const [isRegistrationVisible, setRegistrationVisible] = useState(false);
+    const [isCloseVisible, setCloseVisible] = useState(false);
 
     const openOverlay = () => {
         setOverlayVisible(true);
     };
 
+    const buttonClose = () => {
+        setCloseVisible(true);
+    }
+
     const closeOverlay = () => {
         setOverlayVisible(false);
+        setCloseVisible(false);
         setAuthorizationVisible(false);
         setRegistrationVisible(false);
     }
 
     const showAuthorization = () => {
         openOverlay();
+        buttonClose();
         setAuthorizationVisible(true);
         setRegistrationVisible(false);
     }
 
     const showRegistration = () => {
         openOverlay();
+        buttonClose();
         setAuthorizationVisible(false);
         setRegistrationVisible(true);
     }
@@ -42,39 +51,38 @@ export const Header = () => {
                 <div className={css.overlay}>
                     <div className={css.popup_down}>
                         <div className={css.frame}>
-                            <div className={css.sign_in}>
-                                <h2>Sign in now</h2>
-                                <button onClick={showAuthorization} className={css.button_sign_in}>
-                                    <img src={img6} alt={'button sign in'}/>
-                                </button>
-                                {/*<div className={`transition-container ${isAuthorizationVisible ? 'authorizationVisible' : ''}`}>*/}
-                                {/*    {isAuthorizationVisible ? <Authorization /> : <Registration />}*/}
-                                {/*</div>*/}
-                            </div>
-                            <div className={css.sign_up}>
-                                <h2>Don't have an account?</h2>
-                                <button onClick={showRegistration} className={css.button_sign_up}>
-                                    <img src={img4} alt={'button sign up'}/>
-                                </button>
-                            </div>
+                            {isRegistrationVisible && (
+                                <div className={css.sign_in}>
+                                    <h2>Sign in now</h2>
+                                    <NewButton className={css.btn_sign_in} btnCaption={'Sign in'} onClickHandler={showAuthorization}/>
+                                </div>
+                            )}
+                            {isAuthorizationVisible && (
+                                <div className={css.sign_up}>
+                                    <h2>Don't have an account?</h2>
+                                    <NewButton className={css.btn_sign_up} btnCaption={'Sign up'} onClickHandler={showRegistration}/>
+                                </div>
+                            )}
                         </div>
                     </div>
-                    <Link className={css.close} onClick={closeOverlay} to={'/'}>
-                        <img src={img5} alt={'close'}/>
-                    </Link>
                 </div>
             )}
-                {isAuthorizationVisible && (
-                    <div className={css.transition}>
-                        <Authorization/>
-                    </div>
-                )}
+            {isAuthorizationVisible && (
+                <div className={css.transition}>
+                    <Authorization/>
+                </div>
+            )}
 
-                {isRegistrationVisible && (
-                    <div className={css.transition}>
-                        <Registration/>
-                    </div>
-                )}
+            {isRegistrationVisible && (
+                <div className={css.transition}>
+                    <Registration/>
+                </div>
+            )}
+            {isCloseVisible && (
+                <Link className={css.close} onClick={closeOverlay} to={'/'}>
+                    <img src={img5} alt={'close'}/>
+                </Link>
+            )}
             <div className={css.header}>
                     <li className={css.logo}> logo </li>
                     <li className={css.h_menu_li}>
@@ -90,21 +98,4 @@ export const Header = () => {
             </div>
         </Fragment>
     )
-
-    // return(
-    //     <Fragment>
-    //         <div className={css.header}>
-    //             <li className={css.logo}> logo </li>
-    //             <li className={css.h_menu_li}>
-    //                 <Link className={css.link} to={'/'}>Token</Link>
-    //                 <Link className={css.link} to={'/'}>Contacts</Link>
-    //                 <Link className={css.link} to={'/'}>About</Link>
-    //                 <div className={css.link}><Authorization/></div>
-    //                 <button className={css.link}>How to start</button>
-    //                 <button className={css.link}><Registration/></button>
-    //             </li>
-    //         </div>
-    //     </Fragment>
-    // )
-
 }

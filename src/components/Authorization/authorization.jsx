@@ -41,23 +41,6 @@ export const Authorization = () => {
         setEmail(emailString)
     }
 
-    // const changeEmail =  (e) => {
-    //     const inputValue = e.target.value;
-    //     setEmail(inputValue);
-    //
-    //     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    //     const isValidEmail = emailRegex.test(inputValue);
-    //     setValidEmail(isValidEmail);
-    //
-    //     setErrorMessage('')
-    //
-    //     if(!isValidEmail(e)) {
-    //         setErrorMessage("Enter correct e-mail")
-    //             }
-    //         setEmail(e.target.value)
-    //
-    // }
-
     const changePass = (e) => {
         setPassword(e.target.value)
     }
@@ -117,9 +100,7 @@ export const Authorization = () => {
                         <input className={css.input_auth} type={'email'} value={email} onChange={changeEmail} placeholder='EMAIL' />
                         <input className={css.input_auth} type={'text'} value={password} onChange={changePass} placeholder='PASSWORD' />
                         <p className={css.alarm}> {errorMessage} </p>
-
-                        {/*<MyButton btnCaption={'Login'}/>*/}
-                        <NewButton btnCaption={'Login'} onClickHandler={handlerClick}/>
+                        <NewButton className={css.btn_sign_in} btnCaption={'Login'} onClickHandler={handlerClick}/>
                         <h3>Forgot password or username. <Link to={'/'}>CLICK HERE</Link></h3>
                         <div className={css.sign_in_with}>
                             <h4>Sign in with</h4>
