@@ -3,15 +3,13 @@ import {Link} from 'react-router-dom';
 import { StoreContext } from '../../data/store';
 // import axios from 'axios';
 import css from './authorization.module.scss';
-import img1 from '../../assets/icons/button_login_off.svg';
 import img2 from '../../assets/icons/discord.png';
 import img3 from '../../assets/icons/twitter.png';
-// import {MyButton} from "../Buttons";
 import {NewButton} from "../Buttons";
-import {MyButton} from "../Buttons";
-import {Header} from "../Header";
 
-export const Authorization = () => {
+
+
+export const Authorization = ({showForgotPassHandler}) => {
 
     const authorizationUrl = '/api/auth/sign_in'
     const {apiDomain} = useContext(StoreContext)
@@ -85,9 +83,11 @@ export const Authorization = () => {
     //         })
     //
     // }
+    const fooBar = () =>{
+        showForgotPassHandler()
+    }
 
-
-    const handlerClick = () => {
+    const clickHandler = () => {
         return
     }
 
@@ -100,8 +100,8 @@ export const Authorization = () => {
                         <input className={css.input_auth} type={'email'} value={email} onChange={changeEmail} placeholder='EMAIL' />
                         <input className={css.input_auth} type={'text'} value={password} onChange={changePass} placeholder='PASSWORD' />
                         <p className={css.alarm}> {errorMessage} </p>
-                        <NewButton className={css.btn_sign_in} btnCaption={'Login'} onClickHandler={handlerClick}/>
-                        <h3>Forgot password or username. <Link to={'/'}>CLICK HERE</Link></h3>
+                        <NewButton className={css.btn_sign_in} btnCaption={'Login'} onClickHandler={clickHandler}/>
+                        <h3>Forgot password or username. <Link to={'/'} onClick={fooBar}>CLICK HERE</Link></h3>
                         <div className={css.sign_in_with}>
                             <h4>Sign in with</h4>
                             <div className={css.social_media}>

@@ -121,7 +121,6 @@ export const Registration = () => {
     }
 
     return(
-        <div>
                 <Fragment>
                     <div className={css.popup}>
                         <div className={css.reg}>
@@ -156,6 +155,5 @@ export const Registration = () => {
                         </div>
                     </div>
                 </Fragment>
-        </div>
     )
 }

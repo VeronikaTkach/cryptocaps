@@ -6,6 +6,7 @@ import {Authorization} from "../Authorization";
 import {Registration} from "../Registration";
 import img5 from "../../assets/icons/closePink.svg";
 import {BorderButton} from "../Buttons";
+import {ForgotPassword} from "../ChangePassword/forgotPassword";
 
 
 export const Header = () => {
@@ -14,6 +15,7 @@ export const Header = () => {
     const [isAuthorizationVisible, setAuthorizationVisible] = useState(false);
     const [isRegistrationVisible, setRegistrationVisible] = useState(false);
     const [isCloseVisible, setCloseVisible] = useState(false);
+    const [isForgotPassVisible, setForgotPassVisible] = useState(false);
 
     const openOverlay = () => {
         setOverlayVisible(true);
@@ -23,11 +25,16 @@ export const Header = () => {
         setCloseVisible(true);
     }
 
+    const openForgotPass = () => {
+        setForgotPassVisible(true);
+    }
+
     const closeOverlay = () => {
         setOverlayVisible(false);
         setCloseVisible(false);
         setAuthorizationVisible(false);
         setRegistrationVisible(false);
+        setForgotPassVisible(false);
     }
 
     // // Функция для задержки появления компонента
@@ -76,7 +83,7 @@ export const Header = () => {
         buttonClose();
         setAuthorizationVisible(true);
         setRegistrationVisible(false);
-        // showDelayedAuthorization();
+        setForgotPassVisible(false);
     }
 
     const showRegistration = () => {
@@ -84,7 +91,15 @@ export const Header = () => {
         buttonClose();
         setAuthorizationVisible(false);
         setRegistrationVisible(true);
-        // showDelayedRegistration();
+        setForgotPassVisible(false);
+    }
+
+    const showForgotPass = () => {
+        openOverlay();
+        buttonClose();
+        setAuthorizationVisible(false);
+        setRegistrationVisible(false);
+        openForgotPass();
     }
 
     return(
@@ -110,7 +125,7 @@ export const Header = () => {
                 </div>
             )}
             {isAuthorizationVisible && (
-                    <Authorization/>
+                    <Authorization showForgotPassHandler={showForgotPass}/>
             )}
 
             {isRegistrationVisible && (
@@ -120,6 +135,9 @@ export const Header = () => {
                 <Link className={css.close} onClick={closeOverlay} to={'/'}>
                     <img src={img5} alt={'close'}/>
                 </Link>
+            )}
+            {isForgotPassVisible && (
+                    <ForgotPassword/>
             )}
             <div className={css.header}>
                     <li className={css.logo}> logo </li>
