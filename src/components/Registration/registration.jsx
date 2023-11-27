@@ -4,6 +4,8 @@ import axios from 'axios';
 // import {Link} from "react-router-dom";
 import css from '../Registration/registration.module.scss';
 import img6 from '../../assets/icons/button_sign_up_reg_off.svg';
+import PinkCheckbox from "../ui/Checkbox/checkbox";
+import {NewButton} from "../Buttons";
 
 
 export const Registration = () => {
@@ -54,7 +56,7 @@ export const Registration = () => {
 
         const passwordCheckResult = checkPasswords(password, confirmPassword)
         if (passwordCheckResult === false){
-            setError('Password mismatch')
+            setError('Confirm password not match')
             return
         }
 
@@ -72,6 +74,33 @@ export const Registration = () => {
             'Content-Type': 'application/json'
         }
 
+        // Проверка доступности email
+
+        function checkEmailAvailability() {
+            // Получаем значение email
+            const email = document.getElementById('email').value;
+
+            // Проверяем, что email не пустой
+            if (email.trim() !== '') {
+                // Отправляем запрос с использованием Axios
+                axios.post('check_email_availability.php', { email: email })
+                    .then(function (response) {
+                        // Обрабатываем ответ от сервера
+                        if (response.data === 'available') {
+                            document.getElementById('availability-message').innerHTML = 'Email is available.';
+                        } else {
+                            document.getElementById('availability-message').innerHTML = 'Email is already registered.';
+                        }
+                    })
+                    .catch(function (error) {
+                        setError('This email is already registered');
+                        return
+                    });
+            }
+        }
+
+
+
         axios.post(apiDomain + registrationUrl, data, headers)
             .then(res => {
                 setData(res.data)
@@ -85,6 +114,10 @@ export const Registration = () => {
                 console.log(error)
                 setError(error.response.data.message)
             })
+    }
+
+    const handlerClick = () => {
+        return
     }
 
     return(
@@ -115,12 +148,11 @@ export const Registration = () => {
                                 <label className={css.alarm}>{error}</label>
                             </form>
                             <div className={css.checkbox}>
-                                <input className={css.checkbox_input} type={"checkbox"} onChange={''}/>
-                                <h5 className={css.text_h5}>I ACCEPT THE THERMS OF USE</h5>
+                                {/*<input className={css.checkbox_input} type={"checkbox"} onChange={''}/>*/}
+                                <PinkCheckbox label={'I accept the therms of USE '}/>
+                                {/*<h5 className={css.text_h5}>I ACCEPT THE THERMS OF USE</h5>*/}
                             </div>
-                            <a className={css.btn_sign_up} href={'/'}>
-                                <img src={img6} alt={'sign_up_button'}/>
-                            </a>
+                            <NewButton className={css.btn_sign_up} btnCaption={'Sign up'} onClickHandler={handlerClick}/>
                         </div>
                     </div>
                 </Fragment>

@@ -13,7 +13,7 @@
   margin-left: -200px;
   transform: translate(-50%, -50%);
   border: 1px solid #5DFF51;
-  background: #5DFF51;
+  background: #36E519;
   z-index: 1000; /* Устанавливаем высокий z-index, чтобы окно было поверх всего остального */
   box-sizing: border-box;
 }
@@ -43,7 +43,7 @@
   gap: 10px;
   flex-shrink: 0;
   border: 5px solid #2E1240;
-  background-color: #5DFF51;
+  background-color: #36E519;
 }
 
 .btn_sign_in {

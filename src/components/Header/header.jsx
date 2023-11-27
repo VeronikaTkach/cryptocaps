@@ -1,12 +1,11 @@
 import React, {Fragment, useState} from 'react';
 import css from './header.module.scss';
 import {Link} from 'react-router-dom';
+import { CSSTransition} from "react-transition-group";
 import {Authorization} from "../Authorization";
 import {Registration} from "../Registration";
-import img4 from "../../assets/icons/button_sign_up_off.svg";
 import img5 from "../../assets/icons/closePink.svg";
-import img6 from '../../assets/icons/button_login_off_overlay.svg';
-import {NewButton} from "../Buttons";
+import {BorderButton} from "../Buttons";
 
 
 export const Header = () => {
@@ -31,11 +30,53 @@ export const Header = () => {
         setRegistrationVisible(false);
     }
 
+    // // Функция для задержки появления компонента
+    // const delayComponent = (delay) => {
+    //     return new Promise(resolve => {
+    //         setTimeout(() => {
+    //             resolve();
+    //         }, delay);
+    //     });
+    // };
+    //
+    // const showDelayedAuthorization = async () => {
+    //     // Если компонент уже видим, выходим из функции
+    //     if (isAuthorizationVisible) {
+    //         return;
+    //     }
+    //
+    //     // Задержка в 2000 миллисекунд (2 секунды)
+    //     const delay = 2000;
+    //
+    //     // Вызываем функцию задержки
+    //     delayComponent(delay).then(() => {
+    //         // Устанавливаем видимость компонента в true
+    //         setAuthorizationVisible(true);
+    //     })
+    // };
+    //
+    // const showDelayedRegistration = async () => {
+    //     // Если компонент уже видим, выходим из функции
+    //     if (isRegistrationVisible) {
+    //         return;
+    //     }
+    //
+    //     // Задержка в 2000 миллисекунд (2 секунды)
+    //     const delay = 2000;
+    //
+    //     // Вызываем функцию задержки
+    //    delayComponent(delay).then(() => {
+    //         // Устанавливаем видимость компонента в true
+    //         setRegistrationVisible(true);
+    //     });
+    // };
+
     const showAuthorization = () => {
         openOverlay();
         buttonClose();
         setAuthorizationVisible(true);
         setRegistrationVisible(false);
+        // showDelayedAuthorization();
     }
 
     const showRegistration = () => {
@@ -43,6 +84,7 @@ export const Header = () => {
         buttonClose();
         setAuthorizationVisible(false);
         setRegistrationVisible(true);
+        // showDelayedRegistration();
     }
 
     return(
@@ -53,14 +95,14 @@ export const Header = () => {
                         <div className={css.frame}>
                             {isRegistrationVisible && (
                                 <div className={css.sign_in}>
-                                    <h2>Sign in now</h2>
-                                    <NewButton className={css.btn_sign_in} btnCaption={'Sign in'} onClickHandler={showAuthorization}/>
+                                    <h2>Don’t have an account?</h2>
+                                    <BorderButton className={css.btn_sign_in} btnCaption={'Login'} onClickHandler={showAuthorization}/>
                                 </div>
                             )}
                             {isAuthorizationVisible && (
                                 <div className={css.sign_up}>
-                                    <h2>Don't have an account?</h2>
-                                    <NewButton className={css.btn_sign_up} btnCaption={'Sign up'} onClickHandler={showRegistration}/>
+                                    <h2>Do you have an account?</h2>
+                                    <BorderButton className={css.btn_sign_up} btnCaption={'Sign up'} onClickHandler={showRegistration}/>
                                 </div>
                             )}
                         </div>
@@ -68,15 +110,11 @@ export const Header = () => {
                 </div>
             )}
             {isAuthorizationVisible && (
-                <div className={css.transition}>
                     <Authorization/>
-                </div>
             )}
 
             {isRegistrationVisible && (
-                <div className={css.transition}>
                     <Registration/>
-                </div>
             )}
             {isCloseVisible && (
                 <Link className={css.close} onClick={closeOverlay} to={'/'}>

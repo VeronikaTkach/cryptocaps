@@ -1,15 +1,16 @@
-.parent_container{
-  min-width: 140px; /* или любое другое значение в процентах */
+.parent_container_border{
+  min-width: 120px; /* или любое другое значение в процентах */
   margin: auto; /* для центрирования */
   display: inline-block;
   background: none;
   border: none;
 }
 
-.svg_button {
+.svg_border_button {
   padding: 0;
   margin: 0;
-  font-size: 20px;
+  fill: rgba(48, 17, 63, 0.00);
+  font-size: 12px;
   cursor: pointer;
   transition: box-shadow 0.3s ease; /* добавляем плавный переход для свечения */
 }

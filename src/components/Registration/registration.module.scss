@@ -7,7 +7,7 @@
   width: 578px;
   height: 726px;
   border: 5px solid #5DFF51;
-  background: #5DFF51;
+  background: #36E519;
   position: fixed;
   //margin-left: 509px;
   //margin-right: 843px;
@@ -75,14 +75,15 @@
   gap: 10px;
   flex-shrink: 0;
   border: 5px solid #2E1240;
-  background-color: #5DFF51;
+  background-color: #36E519;
 }
 
 .checkbox {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: -10px;
+  margin-top: -20px;
+
 }
 
 .btn_sign_up {

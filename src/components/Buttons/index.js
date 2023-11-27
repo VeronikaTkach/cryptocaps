@@ -4,4 +4,4 @@ export { NewButton } from './buttonNew'
 
 // export { BigButton } from '/bigButton'
 //
-// export { SmallButton }  from '/smallButton'
+export { BorderButton }  from './borderButton'

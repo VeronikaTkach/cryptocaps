@@ -1,12 +1,12 @@
 import React from 'react';
-import css from './buttonNew.module.scss'
+import css from './borderButton.module.scss'
 
-export const NewButton = ({btnCaption, onClickHandler}) => {
+export const BorderButton = ({btnCaption, onClickHandler}) => {
     return (
-        <button className={css.parent_container} onClick={onClickHandler}>
-            <div className={css.svg_button}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="128" height="48" viewBox="0 0 128 48" fill="none">
-                    <path d="M8.66667 8L19.3333 0H128V12.5V48H0V15L8.66667 8Z" fill="#F30096"/>
+        <button className={css.parent_container_border} onClick={onClickHandler}>
+            <div className={css.svg_border_button}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40" fill="none">
+                    <path d="M8.69413 7.4891L18.4278 1H119V10.4167V39H1V13.0131L8.69413 7.4891Z" stroke="#F30096" stroke-width="2"/>
                     <text className={css.text_for_button} x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="white">
                         {btnCaption}
                     </text>
