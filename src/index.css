@@ -8,9 +8,14 @@
   src: local('Gemunu Libre'), url('./styles/fonts/Gemunu_Libre/GemunuLibre-VariableFont_wght.ttf');
 }
 
+@font-face {
+  font-family: 'Inter', sans-serif;
+  src: local('Inter'), url('./styles/fonts/Inter/Inter-VariableFont_slnt,wght.ttf');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, 'Gemunu Libre', 'Pixy','Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, 'Gemunu Libre', 'Inter', 'Pixy','Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   letter-spacing: 2.5px;
@@ -59,6 +64,17 @@ h5 {
   font-weight: 400;
   font-size: 16px;
   color: white;
+  margin: 0;
+}
+
+h6 {
+  color: #000;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   margin: 0;
 }
 

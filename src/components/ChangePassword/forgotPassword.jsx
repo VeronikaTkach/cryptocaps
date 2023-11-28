@@ -49,27 +49,25 @@ export const ForgotPassword = () => {
         <Fragment>
             {isEnterEmailVisible && (
                 <div className={css.box_forgot}>
-                    <div className={css.container_forgot_pass}>
-                        <div className={css.popup_forgot_pass}>
-                            <div className={css.first_forgot_win}>
-                                <div className={css.ch_forgot_header}>
-                                    <Link to={'/'} className={css.button_return}>
-                                        <img src={img_vector} alt={'arrow back'}/>
-                                    </Link>
-                                    <text>Forgot your password</text>
-                                </div>
-                                <div className={css.form_forgot_pass}>
-                                    <text>Please enter your email address to request a password reset</text>
-                                    <div className={css.form_forgot_pass_row}>
-                                        <text>Email address</text>
-                                        <input/>
-                                    </div>
-                                </div>
-                                <div className={css.btn_next}>
-                                    <NewButton btnCaption={'Next'} onClickHandler={showVerCode}/>
+                    <div className={css.container_forgot}>
+                        <div>
+                            <div className={css.ch_forgot_header}>
+                                <Link to={'/'} className={css.button_return}>
+                                    <img src={img_vector} alt={'arrow back'}/>
+                                </Link>
+                                <h2>Forgot your password</h2>
+                            </div>
+                            <div className={css.form_forgot_pass}>
+                                <h6>Please enter your email address to request a password reset</h6>
+                                <div className={css.form_forgot_pass_row}>
+                                    <h6>Email address</h6>
+                                    <input/>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className={css.btn_forgot}>
+                        <NewButton btnCaption={'Next'} onClickHandler={showVerCode}/>
                     </div>
                     <div className={css.mascot_forgot_pass}>
                         <img src={img_mascot} alt={'mascot'}/>
@@ -77,42 +75,62 @@ export const ForgotPassword = () => {
                 </div>
             )}
             {isVerCodeVisible && (
-                <div className={css.popup_forgot_pass}>
-                    <div className={css.ch_forgot_header}>
-                        <Link to={'/'} className={css.button_return} onClick={showEnterEmail}/>
-                        <text>Forgot your password</text>
-                    </div>
-                    <text>Please enter your the Verification code</text>
-                    <text>We have sent the verification code to your email</text>
-                    <div className={css.ver_code}>
-                        <input/>
-                        <input/>
-                        <input/>
-                        <input/>
-                    </div>
-                    <NewButton btnCaption={'Done'} onClickHandler={showNewPass}/>
-                    <div className={css.mascot_forgot_pass}>
-                        <img src={img_mascot} alt={'mascot'}/>
+                <div className={css.box_forgot}>
+                    <div className={css.container_forgot}>
+                        <div className={css.ch_forgot_header}>
+                            <Link to={'/'} className={css.button_return} onClick={showEnterEmail}>
+                                <img src={img_vector} alt={'arrow back'}/>
+                            </Link>
+                            <h2>Forgot your password</h2>
+                        </div>
+                        <div className={css.form_ver_code}>
+                            <div className={css.big_text}>
+                                <h6>Please enter your the Verification code</h6>
+                            </div>
+                            <div className={css.small_text}>
+                                <text>We have sent the verification code to your email</text>
+                            </div>
+                            <div className={css.ver_code}>
+                                <input className={css.put_code}/>
+                                <input className={css.put_code}/>
+                                <input className={css.put_code}/>
+                                <input className={css.put_code}/>
+                            </div>
+                        </div>
+                        <div className={css.btn_forgot}>
+                            <NewButton btnCaption={'Done'} onClickHandler={showNewPass}/>
+                        </div>
+                        <div className={css.mascot_forgot_pass}>
+                            <img src={img_mascot} alt={'mascot'}/>
+                        </div>
                     </div>
                 </div>
             )}
             {isNewPassVisible && (
-                <div className={css.popup_forgot_pass}>
-                    <div className={css.ch_forgot_header}>
-                        <Link to={'/'} className={css.button_return} onClick={showVerCode}/>
-                        <text>Forgot your password</text>
-                    </div>
-                    <div className={css.form_forgot_pass_row}>
-                        <text>New password</text>
-                        <input/>
-                    </div>
-                    <div className={css.form_forgot_pass_row}>
-                        <text>Re-enter password</text>
-                        <input/>
-                    </div>
-                    <NewButton btnCaption={'Change'} />
-                    <div className={css.mascot_forgot_pass}>
-                        <img src={img_mascot} alt={'mascot'}/>
+                <div className={css.box_forgot}>
+                    <div className={css.container_forgot}>
+                            <div className={css.ch_forgot_header}>
+                                <Link to={'/'} className={css.button_return} onClick={showVerCode}>
+                                    <img src={img_vector} alt={'arrow back'}/>
+                                </Link>
+                                <h2>Forgot your password</h2>
+                            </div>
+                            <div className={css.form_change}>
+                                <div className={css.form_forgot_pass_row}>
+                                    <h6>New password</h6>
+                                    <input/>
+                                </div>
+                                <div className={css.form_forgot_pass_row}>
+                                    <h6>Re-enter password</h6>
+                                    <input/>
+                                </div>
+                            </div>
+                        <div className={css.btn_forgot}>
+                            <NewButton btnCaption={'Change'} />
+                        </div>
+                        <div className={css.mascot_forgot_pass}>
+                            <img src={img_mascot} alt={'mascot'}/>
+                        </div>
                     </div>
                 </div>
             )}
