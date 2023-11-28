@@ -5,7 +5,7 @@ import axios from 'axios';
 import css from '../Registration/registration.module.scss';
 import img6 from '../../assets/icons/button_sign_up_reg_off.svg';
 import PinkCheckbox from "../ui/Checkbox/checkbox";
-import {NewButton} from "../Buttons";
+import {NewButton} from "../ui/Buttons";
 
 
 export const Registration = () => {

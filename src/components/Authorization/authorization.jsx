@@ -5,7 +5,7 @@ import { StoreContext } from '../../data/store';
 import css from './authorization.module.scss';
 import img2 from '../../assets/icons/discord.png';
 import img3 from '../../assets/icons/twitter.png';
-import {NewButton} from "../Buttons";
+import {NewButton} from "../ui/Buttons";
 
 
 

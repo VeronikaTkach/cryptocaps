@@ -5,8 +5,10 @@ import { CSSTransition} from "react-transition-group";
 import {Authorization} from "../Authorization";
 import {Registration} from "../Registration";
 import img5 from "../../assets/icons/closePink.svg";
-import {BorderButton} from "../Buttons";
+import {BigButton, BorderButton, NewButton} from "../ui/Buttons";
 import {ForgotPassword} from "../ChangePassword/forgotPassword";
+import img_logo from "../../assets/images/logo 1.svg";
+import {LangSelect} from "../ui/LangSelect";
 
 
 export const Header = () => {
@@ -36,47 +38,6 @@ export const Header = () => {
         setRegistrationVisible(false);
         setForgotPassVisible(false);
     }
-
-    // // Функция для задержки появления компонента
-    // const delayComponent = (delay) => {
-    //     return new Promise(resolve => {
-    //         setTimeout(() => {
-    //             resolve();
-    //         }, delay);
-    //     });
-    // };
-    //
-    // const showDelayedAuthorization = async () => {
-    //     // Если компонент уже видим, выходим из функции
-    //     if (isAuthorizationVisible) {
-    //         return;
-    //     }
-    //
-    //     // Задержка в 2000 миллисекунд (2 секунды)
-    //     const delay = 2000;
-    //
-    //     // Вызываем функцию задержки
-    //     delayComponent(delay).then(() => {
-    //         // Устанавливаем видимость компонента в true
-    //         setAuthorizationVisible(true);
-    //     })
-    // };
-    //
-    // const showDelayedRegistration = async () => {
-    //     // Если компонент уже видим, выходим из функции
-    //     if (isRegistrationVisible) {
-    //         return;
-    //     }
-    //
-    //     // Задержка в 2000 миллисекунд (2 секунды)
-    //     const delay = 2000;
-    //
-    //     // Вызываем функцию задержки
-    //    delayComponent(delay).then(() => {
-    //         // Устанавливаем видимость компонента в true
-    //         setRegistrationVisible(true);
-    //     });
-    // };
 
     const showAuthorization = () => {
         openOverlay();
@@ -139,18 +100,36 @@ export const Header = () => {
             {isForgotPassVisible && (
                     <ForgotPassword/>
             )}
-            <div className={css.header}>
-                    <li className={css.logo}> logo </li>
-                    <li className={css.h_menu_li}>
-                        <Link className={css.link} to={'/'}>Token</Link>
-                        <Link className={css.link} to={'/'}>Contacts</Link>
-                        <Link className={css.link} to={'/'}>About</Link>
-                        <Link className={css.link} onClick={showAuthorization} to={'/'}>Login</Link>
-
-                        <button className={css.link}>How to start</button>
-
-                        <button className={css.link} onClick={showRegistration}>Registration</button>
-                    </li>
+            <div className={css.background_header}>
+                <svg className={css.header_svg} xmlns="http://www.w3.org/2000/svg" width="1920" height="102" viewBox="0 0 1920 102" fill="none">
+                    <path d="M-23 32C-23 9.9086 -5.09139 -8 17 -8H1902C1924.09 -8 1942 9.90862 1942 32V39.0617C1942 52.8905 1934.86 65.7383 1923.11 73.0369L1886.2 95.9752C1879.86 99.9131 1872.55 102 1865.08 102L47.2408 102C39.0712 102 31.0976 99.4985 24.392 94.8318L-5.84888 73.7861C-16.5941 66.3081 -23 54.0454 -23 40.9543V32Z" fill="#F0DBFF"/>
+                </svg>
+                <div className={css.header_overlay}>
+                    <div className={css.header}>
+                        <div className={css.header_links}>
+                            <li className={css.logo}>
+                                <img src={img_logo} alt={'logo'}/>
+                            </li>
+                            <li className={css.h_menu_li}>
+                                <Link className={css.link_header} to={'/'}>About us</Link>
+                                <Link className={css.link_header} to={'/'}>Community</Link>
+                                <Link className={css.link_header} to={'/'}>News</Link>
+                            </li>
+                        </div>
+                        <div className={css.header_btns}>
+                            <div className={css.link_header}>
+                                <BigButton btnCaption={'What is the web3?'}/>
+                                {/*<button className={css.link_header}>What is the web3?</button>*/}
+                            </div>
+                            <div className={css.link_header}>
+                                <NewButton btnCaption={'Login'} onClickHandler={showAuthorization}/>
+                            </div>
+                            <div className={css.link_header}>
+                                <LangSelect/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </Fragment>
     )

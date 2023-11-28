@@ -1,5 +1,7 @@
 .parent_container{
-  min-width: 140px; /* или любое другое значение в процентах */
+  width: 260px;
+  height: 48px;
+  flex-shrink: 0;
   margin: auto; /* для центрирования */
   display: inline-block;
   background: none;
@@ -21,15 +23,3 @@
 .svg_button:hover svg path {
   box-shadow:0 0 10px 3px #fff; /* Белое свечение при наведении */
 }
-
-//position: absolute;
-//left: 33px;
-//top: 14px;
-//color: #FFF;
-//text-align: center;
-//font-family: Inter;
-//font-size: 20px;
-//font-style: normal;
-//font-weight: 700;
-//line-height: 20px; /* 100% */
-//text-transform: uppercase;
