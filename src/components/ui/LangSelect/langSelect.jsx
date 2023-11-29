@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import img_en from '../../../assets/icons/eng.svg';
+import css from './langSelect.module.scss'
 
 export const LangSelect = () => {
     const [selectedLanguage, setSelectedLanguage] = useState('en'); // Изначально выбран английский язык
@@ -9,7 +11,7 @@ export const LangSelect = () => {
     };
 
     return (
-        <div>
+        <div className={css.custom_select}>
             <select id="language" value={selectedLanguage} onChange={handleLangChange}>
                 <option value="en">ENG</option>
                 <option value="ru">RUS</option>
@@ -17,3 +19,4 @@ export const LangSelect = () => {
         </div>
     );
 }
+
