@@ -2,6 +2,8 @@ export { MyButton } from './button'
 
 export { NewButton } from './buttonNew'
 
-export { BigButton } from './bigButton'
+export { BigBorderButton } from './bigBorderButton'
 
 export { BorderButton }  from './borderButton'
+
+export { BigButton } from './bigButton'

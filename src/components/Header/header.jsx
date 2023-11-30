@@ -5,7 +5,7 @@ import { CSSTransition} from "react-transition-group";
 import {Authorization} from "../Authorization";
 import {Registration} from "../Registration";
 import img5 from "../../assets/icons/closePink.svg";
-import {BigButton, BorderButton, NewButton} from "../ui/Buttons";
+import {BigBorderButton, BorderButton, NewButton} from "../ui/Buttons";
 import {ForgotPassword} from "../ChangePassword/forgotPassword";
 import img_logo from "../../assets/images/logo 1.svg";
 import {LangSelect} from "../ui/LangSelect";
@@ -118,8 +118,7 @@ export const Header = () => {
                         </div>
                         <div className={css.header_btns}>
                             <div className={css.link_header}>
-                                <BigButton btnCaption={'What is the web3?'}/>
-                                {/*<button className={css.link_header}>What is the web3?</button>*/}
+                                <BigBorderButton btnCaption={'What is the web3?'}/>
                             </div>
                             <div className={css.link_header}>
                                 <NewButton btnCaption={'Login'} onClickHandler={showAuthorization}/>

@@ -1,0 +1,72 @@
+.tasks_background {
+    width: 1920px;
+    height: 1261px;
+    flex-shrink: 0;
+    background: url('../../assets/images/img_back_tasks.svg'), #F0DBFF 0 0px / 100% 104.52% no-repeat;
+}
+
+.texts_links {
+    display: flex;
+    flex-direction: row;
+    //justify-content: space-around;
+    align-items: center;
+}
+
+.tasks_h5 {
+    color: #000;
+    font-size: 220px;
+    font-style: normal;
+    line-height: 68%;
+}
+
+.tasks_cloud_down {
+
+}
+
+.tasks_cloud_up {
+
+}
+
+.cloud_links {
+    display: flex;
+    flex-direction: column;
+    width: 535px;
+    height: 152px;
+    //border: solid 5px red;
+}
+
+.cloud_link {
+    margin-bottom: 24px;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.tasks_components {
+    position: relative;
+    height: 480px;
+    border: solid 5px red;
+    margin-top: -220px;
+    margin-bottom: 25px;
+}
+
+.tasks_awards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 280px;
+    background: #2B0C3A4D;
+}
+
+.text_awards {
+    margin-left: 66px;
+    color: #000;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+}

@@ -1,1 +1,1 @@
-export { DailyTasks } from './dailyTasks.module'
+export { DailyTasks } from './dailyTasks'
