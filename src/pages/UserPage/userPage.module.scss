@@ -1,0 +1,47 @@
+.userpage_back_up {
+  width: 1920px;
+  height: 295px;
+  background: linear-gradient(188deg, #2B0C3A -0.68%, #A700FE 52.91%);
+}
+
+.userpage_down {
+  width: 1920px;
+  height: 1260px;
+  background: #600B8D;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  margin-top: 148px;
+  margin-left: 104px;
+}
+
+.text_mascot {
+  margin-top: 31px;
+  color: #C7AFE1;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.text_mascot_h5 {
+  color: #FFF;
+  text-align: center;
+  font-size: 72px;
+  font-style: normal;
+  line-height: 120%;
+}
+
+.userpage_down {
+  display: flex;
+}
+
+.userpage_btns {
+
+}

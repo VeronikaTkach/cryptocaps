@@ -7,6 +7,8 @@ import { Footer } from "../components/Footer";
 import css from './app.module.scss';
 import {DailyTasks} from "../components/DailyTasks";
 import {NewsCollection} from "../components/NewsCollection";
+import {UserPage} from "../pages/UserPage";
+import {Routes, Route} from "react-router-dom";
 
 const App = () => {
 
@@ -14,6 +16,10 @@ const App = () => {
     <div className={css.main}>
             <div className={css.app_header}>
                 <Header/>
+                <Routes>
+                    <Route path="/news" element={<NewsCollection />} />
+                    <Route path="/userpage" element={<UserPage/>} />
+                </Routes>
             </div>
             <div className={css.app_main}>
                 <Main/>

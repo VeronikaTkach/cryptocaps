@@ -31,7 +31,7 @@ export const NewsCollection = () => {
                         <div className={css.news_trust_row}>
                             <h5  className={css.news_trust_small}>Wallet instals </h5>
                             <h5 className={css.news_trust_small}>Created assets</h5>
-                            <h5 className={css.news_trust_small}>Marketplace volum  </h5>
+                            <h5 className={css.news_trust_small}>Marketplace volume  </h5>
                         </div>
                 </div>
             </div>

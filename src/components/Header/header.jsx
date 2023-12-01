@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import css from './header.module.scss';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import { CSSTransition} from "react-transition-group";
 import {Authorization} from "../Authorization";
 import {Registration} from "../Registration";
@@ -63,6 +63,12 @@ export const Header = () => {
         openForgotPass();
     }
 
+    const navigate = useNavigate();
+    const showUserPageHandler = () => {
+        closeOverlay();
+        navigate('/userpage');
+    }
+
     return(
         <Fragment>
             {isOverlayVisible && (
@@ -86,7 +92,7 @@ export const Header = () => {
                 </div>
             )}
             {isAuthorizationVisible && (
-                    <Authorization showForgotPassHandler={showForgotPass}/>
+                    <Authorization showForgotPassHandler={showForgotPass} showUserPageHandler={showUserPageHandler}/>
             )}
 
             {isRegistrationVisible && (
@@ -113,7 +119,7 @@ export const Header = () => {
                             <li className={css.h_menu_li}>
                                 <Link className={css.link_header} to={'/'}>About us</Link>
                                 <Link className={css.link_header} to={'/'}>Community</Link>
-                                <Link className={css.link_header} to={'/'}>News</Link>
+                                <Link className={css.link_header} to={'/news'}>News</Link>
                             </li>
                         </div>
                         <div className={css.header_btns}>
