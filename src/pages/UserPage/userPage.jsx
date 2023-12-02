@@ -16,10 +16,10 @@ export const UserPage = () => {
             <div className={css.userpage_back_up}></div>
             <div className={css.userpage_down}>
                 <div className={css.userpage_btns}>
-                    <Link to={'/'}>My caps</Link>
-                    <Link to={'/'}>Gaming arena</Link>
-                    <Link to={'/'}>Achievements</Link>
-                    <Link to={'/'}>History</Link>
+                    <Link className={css.link_text} to={'/mycaps'}>My caps</Link>
+                    <Link className={css.link_text} to={'/gamingarena'}>Gaming arena</Link>
+                    <Link className={css.link_text} to={'/achivements'}>Achievements</Link>
+                    <Link className={css.link_text} to={'/history'}>History</Link>
                 </div>
             </div>
         </Fragment>

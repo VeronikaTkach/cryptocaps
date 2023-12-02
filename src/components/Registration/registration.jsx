@@ -20,8 +20,21 @@ export const Registration = () => {
     const [error, setError] = useState('')
     const [data, setData] = useState(null)
 
+
+    const checkValidEmail = (emailString) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(emailString);
+    }
+
     const enterEmail = (e) => {
-        setEmail(e.target.value)
+        setError('')
+        const emailString = e.target.value;
+
+        if (!checkValidEmail(emailString)) {
+            setError("Enter correct e-mail")
+        }
+
+        setEmail(emailString)
     }
 
     const enterFullName = (e) => {
@@ -134,7 +147,7 @@ export const Registration = () => {
                                 </div>
                                 <div className={css.reg_input}>
                                     <h5 className={css.text_h5}>EMAIL</h5>
-                                    <input className={css.reg_input_input} type={'text'} value={email} onChange={enterEmail}/>
+                                    <input className={css.reg_input_input} type={'email'} value={email} onChange={enterEmail}/>
                                 </div>
                                 <div className={css.reg_input}>
                                     <h5 className={css.text_h5}>PASSWORD</h5>
@@ -147,9 +160,7 @@ export const Registration = () => {
                                 <label className={css.alarm}>{error}</label>
                             </form>
                             <div className={css.checkbox}>
-                                {/*<input className={css.checkbox_input} type={"checkbox"} onChange={''}/>*/}
                                 <PinkCheckbox label={'I accept the therms of USE '}/>
-                                {/*<h5 className={css.text_h5}>I ACCEPT THE THERMS OF USE</h5>*/}
                             </div>
                             <NewButton className={css.btn_sign_up} btnCaption={'Sign up'} onClickHandler={handlerClick}/>
                         </div>

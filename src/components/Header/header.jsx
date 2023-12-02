@@ -77,13 +77,13 @@ export const Header = () => {
                         <div className={css.frame}>
                             {isRegistrationVisible && (
                                 <div className={css.sign_in}>
-                                    <h2>Don’t have an account?</h2>
+                                    <h2>Do you have an account?</h2>
                                     <BorderButton className={css.btn_sign_in} btnCaption={'Login'} onClickHandler={showAuthorization}/>
                                 </div>
                             )}
                             {isAuthorizationVisible && (
                                 <div className={css.sign_up}>
-                                    <h2>Do you have an account?</h2>
+                                    <h2>Don't have an account?</h2>
                                     <BorderButton className={css.btn_sign_up} btnCaption={'Sign up'} onClickHandler={showRegistration}/>
                                 </div>
                             )}
