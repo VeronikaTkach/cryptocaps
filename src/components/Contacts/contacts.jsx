@@ -16,7 +16,7 @@ export const Contacts = () => {
         <Fragment>
             <div>
                 <div className={css.contacts_back_up}>
-                   <div className={css.partners}></div>
+                   <div className={css.partners}>COMING SOON</div>
                    <div className={css.contacts}>
                        <h5 className={css.text_contacts_big}>Contacts</h5>
                        <h6 className={css.text_contacts_small}>Name</h6>

@@ -21,6 +21,10 @@ export const UserPage = () => {
                     <Link className={css.link_text} to={'/achivements'}>Achievements</Link>
                     <Link className={css.link_text} to={'/history'}>History</Link>
                 </div>
+                <div className={css.user_area}>
+                    <div>USER AREA</div>
+                    <div>COMING SOON</div>
+                </div>
             </div>
         </Fragment>
     )

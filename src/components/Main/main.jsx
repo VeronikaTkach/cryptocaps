@@ -23,7 +23,6 @@ export const Main = () => {
                 </div>
                 <div className={css.main_layout}>
                     <img className={css.main_layout_img} src={img_title} alt={'title'}/>
-                    {/*<div className={css.main_title}>CRYPTOCAPS</div>*/}
                     <div className={css.main_text}>
                         <h6>Bringing the classic “MILK CAPS” game to the WEB3.0 world</h6>
                     </div>

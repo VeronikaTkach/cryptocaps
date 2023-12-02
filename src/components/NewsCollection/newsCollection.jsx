@@ -18,9 +18,15 @@ export const NewsCollection = () => {
                     <div>
                         <h5 className={css.text_news}>NEWS NEWS NEWS</h5>
                     </div>
-                    <div className={css.news_tasks}></div>
+                    <div className={css.news_tasks}>
+                        <div>TASKS</div>
+                        <div>COMING SOON</div>
+                    </div>
                     <h5 className={css.text_news}>Nft Collection</h5>
-                    <div className={css.collection_components}></div>
+                    <div className={css.collection_components}>
+                        <div>NFT CAPS</div>
+                        <div>COMING SOON</div>
+                    </div>
                 </div>
                 <div className={css.btn_tasks}>
                     <BigButton btnCaption={'MORE NFT'} onClickHandler={clickHandler}/>

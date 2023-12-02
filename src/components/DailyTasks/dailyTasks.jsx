@@ -41,6 +41,7 @@ export const DailyTasks = () => {
                     </div>
                     <div className={css.tasks_components}>
                         <div>TASKS</div>
+                        <div> COMING SOON</div>
                     </div>
                     <div className={css.tasks_awards}>
                             <h6 className={css.text_awards}>Awards:</h6>

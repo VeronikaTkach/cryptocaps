@@ -1,7 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import css from './header.module.scss';
 import {Link, useNavigate} from 'react-router-dom';
-import { CSSTransition} from "react-transition-group";
 import {Authorization} from "../Authorization";
 import {Registration} from "../Registration";
 import img5 from "../../assets/icons/closePink.svg";
