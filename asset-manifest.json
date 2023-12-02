@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/cryptocaps/static/css/main.792e2a59.css",
+    "main.js": "/cryptocaps/static/js/main.950b94d7.js",
+    "static/media/caps awards.svg": "/cryptocaps/static/media/caps awards.0c73ed04c0e067dd7b548c34ec350f9b.svg",
+    "static/media/mascot_footer.svg": "/cryptocaps/static/media/mascot_footer.ba1b99a3600f913a2c2a749af3810dad.svg",
+    "static/media/mascot_userpage.svg": "/cryptocaps/static/media/mascot_userpage.a36e2d23121c694f5bdac16e7bcdaec6.svg",
+    "static/media/img_back.png": "/cryptocaps/static/media/img_back.e84f7bf141d5217fc13b.png",
+    "static/media/mascotForgotPass.svg": "/cryptocaps/static/media/mascotForgotPass.f4cae8e10813d695dce497efd94e474c.svg",
+    "static/media/Inter-VariableFont_slnt,wght.ttf": "/cryptocaps/static/media/Inter-VariableFont_slnt,wght.853e01975d2783d9fa29.ttf",
+    "static/media/footer_back.svg": "/cryptocaps/static/media/footer_back.45f6bd56c62ad434941a.svg",
+    "static/media/google_play.svg": "/cryptocaps/static/media/google_play.203b5e00d5e9ec13618a4708c4645551.svg",
+    "static/media/app_store.svg": "/cryptocaps/static/media/app_store.ac1523bad7e0233f224849c12cb098f3.svg",
+    "static/media/img_back_news.svg": "/cryptocaps/static/media/img_back_news.81a178ef6b264b776524.svg",
+    "static/media/img_back_tasks.svg": "/cryptocaps/static/media/img_back_tasks.ff7a397f39003617f1cc.svg",
+    "static/media/GemunuLibre-VariableFont_wght.ttf": "/cryptocaps/static/media/GemunuLibre-VariableFont_wght.1791679501740c00bdf4.ttf",
+    "static/media/mascotForTasks.svg": "/cryptocaps/static/media/mascotForTasks.09b77e1f190ccad65de66074493e3e67.svg",
+    "static/media/eng.svg": "/cryptocaps/static/media/eng.0393b2076f20aa6d943000495a81b558.svg",
+    "static/media/logo 1.svg": "/cryptocaps/static/media/logo 1.b9b4ee7ea3cd5abb99039e69d8dbd622.svg",
+    "static/media/PIXY.ttf": "/cryptocaps/static/media/PIXY.03acdeec66d0edfd264d.ttf",
+    "static/media/button_sign_up_reg_off.svg": "/cryptocaps/static/media/button_sign_up_reg_off.a66ab49831e3e8d38296b860290b174e.svg",
+    "static/media/CRYPTOCAPS.svg": "/cryptocaps/static/media/CRYPTOCAPS.8323a477d903c950ab7cbae4d01a80de.svg",
+    "static/media/cloud.svg": "/cryptocaps/static/media/cloud.895bcc25e4854d42691616a057d7c040.svg",
+    "static/media/Vector.svg": "/cryptocaps/static/media/Vector.e2ebdcad5975b196d1b794c84889c849.svg",
+    "index.html": "/cryptocaps/index.html",
+    "static/media/closePink.svg": "/cryptocaps/static/media/closePink.e41c8cee33338dcafd9fd23ba3c72bd7.svg",
+    "static/media/arrows.svg": "/cryptocaps/static/media/arrows.cd0461d7681473f5b6a020cfd16c5aad.svg",
+    "main.792e2a59.css.map": "/cryptocaps/static/css/main.792e2a59.css.map",
+    "main.950b94d7.js.map": "/cryptocaps/static/js/main.950b94d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.792e2a59.css",
+    "static/js/main.950b94d7.js"
+  ]
+}
