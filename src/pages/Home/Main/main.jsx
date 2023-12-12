@@ -1,10 +1,10 @@
 import React, {Fragment} from "react";
-import img_google from '../../assets/images/google_play.svg';
-import img_app_store from '../../assets/images/app_store.svg';
+import img_google from '../../../assets/images/google_play.svg';
+import img_app_store from '../../../assets/images/app_store.svg';
 // import img_main_back from '../../assets/images/Component 6.svg';
 // import img_main_op from '../../assets/images/opacity_back.png';
-import img_up_back from '../../assets/images/img_back.png';
-import img_title from '../../assets/images/CRYPTOCAPS.svg';
+import img_up_back from '../../../assets/images/img_back.png';
+import img_title from '../../../assets/images/CRYPTOCAPS.svg';
 import css from './main.module.scss';
 
 export const Main = () => {

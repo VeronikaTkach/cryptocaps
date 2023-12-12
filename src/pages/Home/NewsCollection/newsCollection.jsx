@@ -1,7 +1,7 @@
 import React, {Fragment} from "react";
 import css from "./newsCollection.module.scss";
-import img_cloud from "../../assets/images/cloud.svg";
-import {BigButton} from "../ui/Buttons";
+import img_cloud from "../../../assets/images/cloud.svg";
+import {BigButton} from "../../../components/ui/Buttons";
 
 
 

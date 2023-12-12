@@ -1,9 +1,9 @@
 import React, {Fragment} from "react";
 import css from './contacts.module.scss';
 import {Link} from "react-router-dom";
-import {BigButton} from "../ui/Buttons";
-import img_arrows from '../../assets/images/arrows.svg';
-import mascot_footer from '../../assets/images/mascot_footer.svg';
+import {BigButton} from "../../../components/ui/Buttons";
+import img_arrows from '../../../assets/images/arrows.svg';
+import mascot_footer from '../../../assets/images/mascot_footer.svg';
 
 
 export const Contacts = () => {

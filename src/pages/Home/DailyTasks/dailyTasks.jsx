@@ -1,9 +1,9 @@
 import React, {Fragment} from "react";
 import { Link } from "react-router-dom";
 import css from './dailyTasks.module.scss';
-import img_cloud from '../../assets/images/cloud.svg';
-import mascot_tasks from '../../assets/images/mascotForTasks.svg';
-import awards from '../../assets/images/caps awards.svg';
+import img_cloud from '../../../assets/images/cloud.svg';
+import mascot_tasks from '../../../assets/images/mascotForTasks.svg';
+import awards from '../../../assets/images/caps awards.svg';
 export const DailyTasks = () => {
 
     // const Tasks = (n) => {

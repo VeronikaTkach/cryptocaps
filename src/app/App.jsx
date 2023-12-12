@@ -1,12 +1,12 @@
 import React from 'react';
 import { Header } from '../components/Header';
-import { Main } from '../components/Main'
-import { Contacts } from '../components/Contacts';
+import { Main } from '../pages/Home/Main'
+import { Contacts } from '../pages/Home/Contacts';
 import { Footer } from "../components/Footer";
 
 import css from './app.module.scss';
-import {DailyTasks} from "../components/DailyTasks";
-import {NewsCollection} from "../components/NewsCollection";
+import {DailyTasks} from "../pages/Home/DailyTasks";
+import {NewsCollection} from "../pages/Home/NewsCollection";
 import {UserPage} from "../pages/UserPage";
 import {Routes, Route} from "react-router-dom";
 
