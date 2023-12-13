@@ -8,6 +8,7 @@ import {BigBorderButton, BorderButton, NewButton} from "../ui/Buttons";
 import {ForgotPassword} from "../ChangePassword/forgotPassword";
 import img_logo from "../../assets/images/logo 1.svg";
 import {LangSelect} from "../ui/LangSelect";
+import { scroller } from 'react-scroll';
 
 
 export const Header = () => {
@@ -68,6 +69,14 @@ export const Header = () => {
         navigate('/userpage');
     }
 
+    const scrollToComponent = (elementName) => {
+        scroller.scrollTo(elementName, {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart',
+        })
+    }
+
     return(
         <Fragment>
             {isOverlayVisible && (
@@ -116,9 +125,10 @@ export const Header = () => {
                                 <img src={img_logo} alt={'logo'}/>
                             </li>
                             <li className={css.h_menu_li}>
-                                <Link className={css.link_header} to={'/'}>About us</Link>
+                                {/*<Link className={css.link_header} to={'/#main'}>About us</Link>*/}
+                                <Link to={'main'} smooth={true} onClick={() => scrollToComponent('main')} className={css.link_header}>About us</Link>
                                 <Link className={css.link_header} to={'/'}>Community</Link>
-                                <Link className={css.link_header} to={'/news'}>News</Link>
+                                <Link to={'news'} smooth={true} onClick={() => scrollToComponent('news')} className={css.link_header}>News</Link>
                             </li>
                         </div>
                         <div className={css.header_btns}>

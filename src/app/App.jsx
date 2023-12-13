@@ -3,7 +3,7 @@ import { Header } from '../components/Header';
 import { Main } from '../pages/Home/Main'
 import { Contacts } from '../pages/Home/Contacts';
 import { Footer } from "../components/Footer";
-
+import {Element} from 'react-scroll';
 import css from './app.module.scss';
 import {DailyTasks} from "../pages/Home/DailyTasks";
 import {NewsCollection} from "../pages/Home/NewsCollection";
@@ -17,19 +17,22 @@ const App = () => {
             <div className={css.app_header}>
                 <Header/>
                 <Routes>
-                    <Route path="/news" element={<NewsCollection />} />
                     <Route path="/userpage" element={<UserPage/>} />
                 </Routes>
             </div>
-            <div className={css.app_main}>
+
+            <Element name={'main'} className={css.app_main}>
                 <Main/>
-            </div>
+            </Element>
+            {/*<div className={css.app_main}>*/}
+            {/*    <Main/>*/}
+            {/*</div>*/}
             <div className={css.app_daily_tasks}>
                 <DailyTasks/>
             </div>
-            <div className={css.app_news_collection}>
+            <Element name={'news'} className={css.app_news_collection}>
                 <NewsCollection/>
-            </div>
+            </Element>
             <div className={css.app_contacts}>
                 <Contacts/>
             </div>
