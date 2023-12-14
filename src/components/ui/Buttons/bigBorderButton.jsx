@@ -1,9 +1,9 @@
 import React from 'react';
 import css from './bigBorderButton.module.scss'
 
-export const BigBorderButton = ({btnCaption}) => {
+export const BigBorderButton = ({btnCaption, onClickHandler}) => {
     return (
-        <button className={css.parent_container}>
+        <button className={css.parent_container} onClick={onClickHandler}>
             <div className={css.svg_button}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="260" height="48" viewBox="0 0 260 48" fill="none">
                     <path d="M259 12.5V47H1V15.4766L18.8545 1H259V12.5Z" stroke="#2B0C3A" stroke-width="2"/>

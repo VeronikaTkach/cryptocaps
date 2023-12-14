@@ -5,7 +5,7 @@ import img_app_store from '../../../assets/images/app_store.svg';
 // import img_main_op from '../../assets/images/opacity_back.png';
 import img_up_back from '../../../assets/images/img_back.png';
 import img_title from '../../../assets/images/CRYPTOCAPS.svg';
-import css from './main.module.scss';
+import css from '../../../styles/main.module.scss';
 
 export const Main = () => {
 

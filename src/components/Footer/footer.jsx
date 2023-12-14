@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import css from "../Footer/footer.module.scss";
+import css from "../../styles/footer.module.scss";
 import {Link} from "react-router-dom";
 
 export const Footer = () => {

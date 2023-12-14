@@ -8,6 +8,7 @@ import css from './app.module.scss';
 import {DailyTasks} from "../pages/Home/DailyTasks";
 import {NewsCollection} from "../pages/Home/NewsCollection";
 import {UserPage} from "../pages/UserPage";
+import {Begginers} from '../pages/Beginners';
 import {Routes, Route} from "react-router-dom";
 
 const App = () => {
@@ -18,15 +19,12 @@ const App = () => {
                 <Header/>
                 <Routes>
                     <Route path="/userpage" element={<UserPage/>} />
+                    <Route path="/begginers" element={<Begginers/>} />
                 </Routes>
             </div>
-
             <Element name={'main'} className={css.app_main}>
                 <Main/>
             </Element>
-            {/*<div className={css.app_main}>*/}
-            {/*    <Main/>*/}
-            {/*</div>*/}
             <div className={css.app_daily_tasks}>
                 <DailyTasks/>
             </div>

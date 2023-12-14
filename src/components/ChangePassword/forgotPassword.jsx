@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from "react";
-import css from './forgotPassword.module.scss'
+import css from '../../styles/forgotPassword.module.scss'
 import {Link} from "react-router-dom";
 import {NewButton} from "../ui/Buttons";
 import img_mascot from '../../assets/images/mascotForgotPass.svg';

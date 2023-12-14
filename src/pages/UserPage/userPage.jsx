@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import css from './userPage.module.scss';
+import css from '../../styles/userPage.module.scss';
 import {Link} from "react-router-dom";
 import mascot_userpage from '../../assets/images/mascot_userpage.svg';
 

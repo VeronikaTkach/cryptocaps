@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import css from './header.module.scss';
+import css from '../../styles/header.module.scss';
 import {Link, useNavigate} from 'react-router-dom';
 import {Authorization} from "../Authorization";
 import {Registration} from "../Registration";
@@ -69,6 +69,11 @@ export const Header = () => {
         navigate('/userpage');
     }
 
+    const showWeb3 = () => {
+        closeOverlay();
+        navigate('/begginers');
+    }
+
     const scrollToComponent = (elementName) => {
         scroller.scrollTo(elementName, {
             duration: 800,
@@ -133,7 +138,7 @@ export const Header = () => {
                         </div>
                         <div className={css.header_btns}>
                             <div className={css.link_header}>
-                                <BigBorderButton btnCaption={'What is the web3?'}/>
+                                <BigBorderButton btnCaption={'What is the web3?'} onClickHandler={showWeb3}/>
                             </div>
                             <div className={css.link_header}>
                                 <NewButton btnCaption={'Login'} onClickHandler={showAuthorization}/>

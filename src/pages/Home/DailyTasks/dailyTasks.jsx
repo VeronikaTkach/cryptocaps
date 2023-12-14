@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
 import { Link } from "react-router-dom";
-import css from './dailyTasks.module.scss';
+import css from '../../../styles/dailyTasks.module.scss';
 import img_cloud from '../../../assets/images/cloud.svg';
 import mascot_tasks from '../../../assets/images/mascotForTasks.svg';
 import awards from '../../../assets/images/caps awards.svg';
