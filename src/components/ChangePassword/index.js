@@ -1,1 +1,1 @@
-export { ChangePassword } from '../../styles/forgotPassword.module.scss'
+export { ChangePassword } from './forgotPassword.module.scss'

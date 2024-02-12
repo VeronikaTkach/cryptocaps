@@ -1,0 +1,61 @@
+.main {
+  display: flex;
+}
+
+.main__background {
+  width: 100vw;
+}
+
+.background__img {
+  position: absolute;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.main__layout {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__layoutImg {
+    width: 1109px;
+    height: 240px;
+    margin-top: 139px;
+    margin-left: 516px;
+    box-sizing: border-box;
+}
+
+.main__text h6{
+  width: 1036px;
+  color: #FFF;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 72px;
+  letter-spacing: 0.8px;
+  margin-left: 527px;
+}
+
+.main__btns {
+  margin-left: 663px;
+  margin-top: 77px;
+}
+
+.app_btn_g {
+
+}
+
+.app_btn_a {
+
+}
+
+.main__text_pixy {
+  color: #FFF;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  line-height: 68%;
+  margin-top: 48px;
+  margin-left: 20%;
+}

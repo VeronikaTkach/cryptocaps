@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import css from '../../../styles/contacts.module.scss';
+import css from './contacts.module.scss';
 import {Link} from "react-router-dom";
 import {BigButton} from "../../../components/ui/Buttons";
 import img_arrows from '../../../assets/images/arrows.svg';

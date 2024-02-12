@@ -14,27 +14,27 @@ import {Routes, Route} from "react-router-dom";
 const App = () => {
 
   return (
-    <div className={css.main}>
-            <div className={css.app_header}>
+    <div className={css.app}>
+            <div className={css.app__header}>
                 <Header/>
                 <Routes>
                     <Route path="/userpage" element={<UserPage/>} />
                     <Route path="/begginers" element={<Begginers/>} />
                 </Routes>
             </div>
-            <Element name={'main'} className={css.app_main}>
+            <Element name={'main'} className={css.app__main}>
                 <Main/>
             </Element>
-            <div className={css.app_daily_tasks}>
+            <div className={css.app__dailyTasks}>
                 <DailyTasks/>
             </div>
-            <Element name={'news'} className={css.app_news_collection}>
+            <Element name={'news'} className={css.app__newsCollection}>
                 <NewsCollection/>
             </Element>
-            <div className={css.app_contacts}>
+            <div className={css.app__contacts}>
                 <Contacts/>
             </div>
-            <div className={css.app_footer}>
+            <div className={css.app__footer}>
                 <Footer/>
             </div>
     </div>

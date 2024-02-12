@@ -1,43 +1,44 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@400;600&display=swap');
 
-.main {
+.app {
   display: flex;
   flex-direction: column;
+  width: 100vw;
 }
 
-.app_header {
+.app__header {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 50;
 }
 
-.app_main {
+.app__main {
   position: absolute;
   margin-top: 67px;
   z-index: 49;
 }
 
-.app_daily_tasks {
+.app__dailyTasks {
   position: absolute;
   margin-top: 982px;
   z-index: 48;
 }
 
-.app_news_collection {
+.app__newsCollection {
   position: absolute;
   margin-top: 2240px;
   z-index: 47;
 }
 
-.app_contacts {
+.app__contacts {
   position: absolute;
   margin-top: 5215px;
   z-index: 45;
 }
 
-.app_footer {
+.app__footer {
   position: absolute;
   margin-top: 6795px;
   z-index: 44;

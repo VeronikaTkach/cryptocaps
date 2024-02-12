@@ -2,7 +2,7 @@ import React, {Fragment, useContext, useState} from 'react';
 import {StoreContext} from '../../data/store';
 import axios from 'axios';
 // import {Link} from "react-router-dom";
-import css from '../../styles/registration.module.scss';
+import css from './registration.module.scss';
 import img6 from '../../assets/icons/button_sign_up_reg_off.svg';
 import PinkCheckbox from "../ui/Checkbox/checkbox";
 import {NewButton} from "../ui/Buttons";

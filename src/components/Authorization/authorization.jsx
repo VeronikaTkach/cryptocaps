@@ -2,7 +2,7 @@ import React, {Fragment, useContext, useState} from 'react';
 import {useNavigate, Link} from 'react-router-dom';
 import { StoreContext } from '../../data/store';
 // import axios from 'axios';
-import css from '../../styles/authorization.module.scss';
+import css from './authorization.module.scss';
 import img2 from '../../assets/icons/discord.png';
 import img3 from '../../assets/icons/twitter.png';
 import {NewButton} from "../ui/Buttons";

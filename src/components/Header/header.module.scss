@@ -1,8 +1,8 @@
 
 .background_header{
   position: relative;
-  width: 100vw;
-  height: 102px;
+  //width: 100vw;
+  //height: 102px;
 }
 
 .header_svg {
@@ -22,7 +22,7 @@
 }
 
 .header {
-  width: 1920px;
+  width: 100vw;
   height: 110px;
   display: flex;
   justify-content: space-between;

@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import css from '../../styles/header.module.scss';
+import css from './header.module.scss';
 import {Link, useNavigate} from 'react-router-dom';
 import {Authorization} from "../Authorization";
 import {Registration} from "../Registration";
