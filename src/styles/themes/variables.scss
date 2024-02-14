@@ -1,16 +1,26 @@
 //colors
 $colorLightViolet: #F0DBFF;
+$colorViolet: #C7AFE1;
+$colorDeepViolet: #2B0C3A;
 $colorTotalBlack: #000000;
-$colorNoneToxicGreen: #36e519;
 $colorTotalWhite: #FFFFFF;
-$colorHeaderText: #2B0C3A;
-$colorHeaderBtn: #2B0C3A;
-$colorHeaderBtnSmall: #F30096;
+$colorNoneToxicGreen: #36e519;
+$colorAcidGreen: #00FE00;
+$colorGreen: #127F00;
+$colorLightBlue: #15F3EF;
+$colorPink: #F30096;
+$colorLightLemon: #F3FFDF;
+$colorSummer: #E1B20D;
+$colorOrange: #FFA723;
+$colorAutumn: #CF4B00;
+$colorSpring: #50D15D;
+$colorWinter: #14C3C0;
+
+
 
 
 //gradient
 $colorTitleGradient: linear-gradient(127deg, #fff 0%, #d3d3d3 100%);
-
 
 //shadow
 
@@ -19,9 +29,37 @@ $colorTitleGradient: linear-gradient(127deg, #fff 0%, #d3d3d3 100%);
 
 
 //sizes
-
+$sizeContainerLarge: 1920px;
+$sizeContainer: 1432px;
+$sizeExtraLarge: 1200px;
+$sizeLarge: 950px;
+$sizeMedium: 786px;
+$sizeSmall: 576px;
 
 //images
-
+$logo: url('../../assets/images/logo 1.svg');
+$cloud: url('../../assets/images/cloud.svg');
 
 //mixins
+//general font mixins
+@mixin fontGemunuLibre() {
+  font-family: 'Gemunu Libre', Arial, Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@mixin fontPixy() {
+  font-family: 'PIXY', Arial, Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@mixin fontInter() {
+  font-family: 'Inter', Arial, Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@mixin fontStyle($size: 16px, $weight: 400, $height: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+//extends
+
+//fonts
