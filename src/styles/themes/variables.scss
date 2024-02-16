@@ -62,4 +62,38 @@ $cloud: url('../../assets/images/cloud.svg');
 
 //extends
 
+
 //fonts
+@mixin textLinksHeader() {
+  @include fontInter;
+  @include fontStyle($size: 18px, $weight: 600, $height: 22px)
+}
+
+@mixin textBtn1() {
+  @include fontInter;
+  @include fontStyle($size: 20px, $weight: 600, $height: 20px);
+  text-transform: uppercase;
+}
+
+@mixin textInter1() {
+  @include fontInter;
+  @include fontStyle($size: 20px, $weight: 700, $height: 20px);
+  text-transform: uppercase;
+}
+
+@mixin textInter2() {
+  @include fontInter;
+  @include fontStyle($size: 36px, $weight: 400, $height: 72px);
+}
+
+@mixin textInter3() {
+  @include fontInter;
+  @include fontStyle($size: 64px, $weight: 600, $height: 100%);
+}
+
+@mixin textCardTitle() {
+  @include fontPixy;
+  @include fontStyle($size: 28px, $weight: 400, $height: 24px);
+  text-transform: uppercase;
+}
+
