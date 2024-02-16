@@ -16,9 +16,6 @@ $colorAutumn: #CF4B00;
 $colorSpring: #50D15D;
 $colorWinter: #14C3C0;
 
-
-
-
 //gradient
 $colorTitleGradient: linear-gradient(127deg, #fff 0%, #d3d3d3 100%);
 
@@ -83,12 +80,28 @@ $cloud: url('../../assets/images/cloud.svg');
 
 @mixin textInter2() {
   @include fontInter;
-  @include fontStyle($size: 36px, $weight: 400, $height: 72px);
+  @include fontStyle($size: 32px, $weight: 500, $height: 39px);
+  text-transform: uppercase;
 }
 
 @mixin textInter3() {
   @include fontInter;
+  @include fontStyle($size: 36px, $weight: 400, $height: 72px);
+}
+
+@mixin textInter4() {
+  @include fontInter;
   @include fontStyle($size: 64px, $weight: 600, $height: 100%);
+}
+
+@mixin textCardMain() {
+  @include fontInter;
+  @include fontStyle($size: 18px, $weight: 400, $height: 24px);
+}
+
+@mixin textQuestMain() {
+  @include fontInter;
+  @include fontStyle($size: 18px, $weight: 400, $height: 32px);
 }
 
 @mixin textCardTitle() {
@@ -97,3 +110,55 @@ $cloud: url('../../assets/images/cloud.svg');
   text-transform: uppercase;
 }
 
+@mixin textBtnBuyNFT() {
+  @include fontGemunuLibre;
+  @include fontStyle($size: 42px, $weight: 600, $height: 120%);
+}
+
+@mixin textPixy1() {
+  @include fontPixy;
+  @include fontStyle($size: 28px, $weight: 400, $height: 24px);
+}
+
+@mixin textPixy2() {
+  @include fontPixy;
+  @include fontStyle($size: 32px, $weight: 400, $height: 36px);
+}
+
+@mixin textPixy3() {
+  @include fontPixy;
+  @include fontStyle($size: 36px, $weight: 400, $height: 41px);
+}
+
+@mixin textPixy4() {
+  @include fontPixy;
+  @include fontStyle($size: 48px, $weight: 400, $height: 68%);
+}
+
+@mixin textPixy4() {
+  @include fontPixy;
+  @include fontStyle($size: 60px, $weight: 400, $height: 69px);
+}
+
+@mixin textPixy5() {
+  @include fontPixy;
+  @include fontStyle($size: 96px, $weight: 400, $height: 68%);
+}
+
+//others
+@mixin width-height($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin borderStyle($border, $borderRadius) {
+  border: $border;
+  border-radius: $borderRadius;
+}
+
+@mixin flex-grid($display, $direction, $justify, $align) {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
