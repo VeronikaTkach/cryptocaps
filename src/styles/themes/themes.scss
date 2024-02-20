@@ -3,15 +3,49 @@
 @import './themesVariables';
 
 $themes: (
-  dark: (
-  //space
+        dark: (
+          //space
 
-  //colors
+          //colors
 
-  //gradient
+          //gradient
 
-  //images
+          //images
 
-  ),
-        
+        ),
+        light: (
+        //space
+
+        //colors
+
+        //gradient
+
+        //images
+
+        ),
 )
+
+@mixin themed {
+  @each $theme, $map in $themes {
+    :global(.theme--#{$theme}) & {
+      $theme-map: () !global;
+
+      @each $key, $submap in $map {
+        $value: map.get($map, $key);
+        $theme-map: map.merge(
+                        $theme-map,
+                        (
+                                $key: $value,
+                        )
+        ) !global;
+      }
+      @content;
+
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t( $key ) {
+  @return map-get( $theme-map , $key );
+}
